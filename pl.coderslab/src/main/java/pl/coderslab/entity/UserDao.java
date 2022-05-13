@@ -25,7 +25,6 @@ public class UserDao {
                 users.setId(resultSet.getInt("id"));
                 users.setEmail(resultSet.getString("email"));
                 users.setUserName(resultSet.getString("username"));
-                users.setPassword(resultSet.getString("password"));
                 findAllUsers = DbUtil.addToArray(users, findAllUsers);
             }
             return findAllUsers;
@@ -70,7 +69,6 @@ public class UserDao {
                 user.setId(resultSet.getInt("id"));
                 user.setEmail(resultSet.getString("email"));
                 user.setUserName(resultSet.getString("username"));
-                user.setPassword(resultSet.getString("password"));
                 return user;
             }
         } catch (SQLException e) {
